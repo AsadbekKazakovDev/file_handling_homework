@@ -6,5 +6,14 @@ def main(data:str):
     Returns:
         int: return answer
     """
+    digits = [int(digit) for digit in data if digit.isdigit()]
+    if digits:
+        return min(digits)
+f = open("data/data09.txt","r")
+data  = f.read()
+f.close
+
+print(main(data))
+    
 
 # Read data from file
